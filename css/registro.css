@@ -1,0 +1,212 @@
+/* ==========================================================================
+	@author: Jose Incera;
+   ========================================================================== */
+
+/* ==========================================================================
+	Global
+   ========================================================================== */
+
+a:hover{
+	text-decoration: none;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.center-block {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-bold{
+	font-weight: normal !important;
+}
+
+.fill{
+	width: 100% !important;
+}
+
+.w300{
+	font-weight: 300 !important;
+}
+
+.shadow{
+	text-shadow: 1px 1px 3px #000;
+}
+
+.no-shadow{
+	text-shadow: none;
+}
+
+.seccion{
+	padding: 5% 3%;
+}
+
+.seccion-small{
+	padding: 3% 1%;
+}
+
+section{
+	background-color: #fff;
+}
+
+.transparent{
+	background-color: transparent;
+}
+
+.error{
+	color: red;
+}
+
+.col{
+	color: #CC0000;
+	border-color: #ff0000 #0000ff;
+}
+
+/* ==========================================================================
+	0. Background
+   ========================================================================== */
+.background{
+	background-image: url(../img/test.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.main-container{
+	position: relative;
+	z-index: 1000;
+}
+
+/* ==========================================================================
+	1. Intro
+   ========================================================================== */
+
+#logo-main{
+	width: 600px;
+}
+
+#home-hero{
+	/*background-image: url(../img/stock/agricultor.jpg);*/
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+#home-hero .container{
+	color: #fff !important;
+}
+
+#conoce-mas a{
+	color: #fff !important;
+}
+
+#conoce-mas a:hover{
+	color: #eee !important;
+}
+
+
+/* ==========================================================================
+	2. Why
+   ========================================================================== */
+
+/* ==========================================================================
+	3. Que
+   ========================================================================== */
+
+#que{
+	/*background-image: url(../img/stock/chile-blur.jpg);*/
+	background-color: #eee;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#devices{
+	width: 700px;
+}
+
+/* ==========================================================================
+	4. Como
+   ========================================================================== */
+.pasos li{
+	list-style-type: none;
+	padding-bottom: 20px;
+}
+
+.pasos i{
+	vertical-align: middle;
+}
+
+.pasos .small{
+	font-size: 14px;
+}
+
+.pasos span{
+	font-size: 20px;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+.feature-box{
+}
+
+/* ==========================================================================
+	5. Call 2
+   ========================================================================== */
+
+#callToAtction2{
+	/*background-image: url(../img/stock/chile-blur.jpg);*/
+	background-color: #eee;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+
+/* ==========================================================================
+	6. Footer
+   ========================================================================== */
+
+footer{
+	background-color: #373737;
+	color: #fff !important;
+}
+
+footer a{
+	color: #fff !important;
+}
+
+#logo-footer{
+	width: 100px;
+}
+
+/* ==========================================================================
+	7. Registration
+   ========================================================================== */
+#registration{
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 30px;
+	background-color: #eee;
+}
