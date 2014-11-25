@@ -1,0 +1,355 @@
+		<!DOCTYPE html>
+		<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+		<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+		<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+		<!--[if gt IE 8]> <html class="no-js"> <![endif]-->
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+			<title>Espazio</title>
+			<meta name="description" content="">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!--<link rel="icon" type="image/png" href="img/favicon.png"> -->
+      <%= stylesheet_link_tag "application", media:"all" %>
+		</head>
+		<body>
+		<!--[if lte IE 8]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<!-- Nav -->
+		<div id="nav" class="navbar navbar navbar-fixed-top" role="navigation">
+			<div id="main-nav-container" class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<%= link_to(root_path, id: "logo-menu-link", class: "navbar-brand") do %>
+            <%= image_tag("logo.png", class: "img-responsive", id: "logo-menu") %>
+          <% end %>
+				</div>
+				<div class="navbar-collapse collapse navbar-right">
+					<ul class="nav navbar-nav navbar-left">
+						<li><%= link_to "Inicio", root_path %></li>
+						<li><%= link_to "Busca", busqueda_path %></li>
+						<li><a href="#">Como funciona</a></li>
+						<li><a href="#">Login</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="form">
+            <%= link_to "Comparte tu espacio", signup_path, type: "submit", class: "btn btn-primary" %>
+					</form>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</div><!-- /Nav -->
+
+		<section id="intro">
+			<div id="home-hero" class="jumbotron">
+				<div class="container shadow">
+					<h1 class="center-block w300">Espazio</h1>
+					<h3 class="center-block no-bold m-btm20 shadow">Comparte espacios de trabajo ahora!</h3>
+					<h3 class="center-block no-bold m-top40 m-btm20">¡Regístrate!</h3>
+					<div class="col-sm-6 col-sm-offset-3">
+						<a href="signup.html" type="submit" class="btn btn-lg btn-primary no-shadow fill">Regístrate</a>
+					</div>
+				</div>
+				
+			</div>
+			
+		</section>
+
+<!---------------------------------------- SLIDER ---------------------------------- -->
+
+
+		<section id="espacios" class="m-btm20 container-fluid">
+			<div class="row-fluid m-top40">
+
+        <div class="col-xs-1 p-0">
+          <i id="sliderPrev" class="fa fa-angle-left fa-4x slider-control right"></i>
+        </div>
+
+        <div class="col-xs-10">
+          <div id="sliderProductos" class="owl-carousel">
+
+            <div class="product-box item">
+              <div class="thumbnail">
+                <%= image_tag("oficina_chica.jpg", class: "img-responsive", alt: "...") %>
+                <div class="caption">
+                  <h3 style="margin-bottom:15px;">Oficina Pequena</h3>
+                  <p><a href="login.html" class="btn btn-primary" role="button">Ver más</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-box item">
+              <div class="thumbnail">
+                <%= image_tag("ofi2.jpg", class: "img-responsive", alt: "...") %>
+                <div class="caption">
+                  <h3 style="margin-bottom:15px;">Oficina Grande</h3>
+                  <p><a href="login.html" class="btn btn-primary" role="button">Ver más</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-box item">
+              <div class="thumbnail">
+                <%= image_tag("cow.jpg", class: "img-responsive", alt: "...") %>
+                <div class="caption">
+                  <h3 style="margin-bottom:15px;">Coworking</h3>
+                  <p><a href="login.html" class="btn btn-primary" role="button">Ver más</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-box item">
+              <div class="thumbnail">
+                <%= image_tag("espacio.jpg", class: "img-responsive", alt: "...") %>
+                <div class="caption">
+                  <h3 style="margin-bottom:15px;">Espacios de Trabajo</h3>
+                  <p><a href="login.html" class="btn btn-primary" role="button">Ver más</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-box item">
+              <div class="thumbnail">
+                <%= image_tag("office.jpg", class: "img-responsive", alt: "...") %>
+                <div class="caption">
+                  <h3 style="margin-bottom:15px;">Oficinas</h3>
+                  <p><a href="login.html" class="btn btn-primary" role="button">Ver más</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-box item">
+              <div class="thumbnail">
+                <%= image_tag("escritorio.jpg", class: "img-responsive", alt: "...") %>
+                <div class="caption">
+                  <h3 style="margin-bottom:15px;">Escitorios personales</h3>
+                  <p><a href="login.html" class="btn btn-primary" role="button">Ver más</a></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-xs-1 p-0">
+          <i id="sliderNext" class="fa fa-angle-right fa-4x slider-control le"></i>
+        </div>
+
+      </div>
+		</section>
+
+
+<!---------------------------------------- ESPACIOS ---------------------------------- -->
+
+
+		<section class="alternate">
+			<div class="container">
+
+      <h1 class="center">Escoge el tipo de espacio!</h1>
+        <div class="row">
+          <div class="col-md-12" style="margin-top:20px;">
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jitomate.html"><%= image_tag("grande.png", class: "img-responsive", alt: "...") %></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jitomate.html"><h3 class="">Individual</h3></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jitomate.html"><%= image_tag("grande.png", class: "img-responsive", alt: "...") %></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jitomate.html"><h3 class="">Muchos</h3></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jitomate.html"><%= image_tag("grande.png", class: "img-responsive", alt: "...") %></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jitomate.html"><h3 class="">Conferencia</h3></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jitomate.html"><%= image_tag("grande.png", class: "img-responsive", alt: "...") %></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jitomate.html"><h3 class="">Grande</h3></a>
+              </div>
+            </div>
+          </div>
+          </div>
+
+         <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jitomate.html"><%= image_tag("grande.png", class: "img-responsive", alt: "...") %></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jitomate.html"><h3 class="">Jitomate Bola</h3></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jitomate.html"><%= image_tag("grande.png", class: "img-responsive", alt: "...") %></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jitomate.html"><h3 class="">Jitomate Bola</h3></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jitomate.html"><%= image_tag("grande.png", class: "img-responsive", alt: "...") %></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jitomate.html"><h3 class="">Jitomate Bola</h3></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jitomate.html"><%= image_tag("grande.png", class: "img-responsive", alt: "...") %></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jitomate.html"><h3 class="">Jitomate Bola</h3></a>
+              </div>
+            </div>
+          </div>
+
+        </div>   
+      </div>
+		</section>
+
+
+<!---------------------------------------- RESTO ---------------------------------- -->
+
+    <section id="que">
+      <div class="container seccion">
+        <div class="row">
+          <div class="col-sm-4">
+            <%= image_tag("espacio.jpg", class: "img-circle img-responsive center center-block", style: "width:300px;") %>
+          </div>
+          <div class="col-sm-8 m-top20">
+            <h3 class="w300">
+              Espazio te permite encontrar tu espacio perfecto para trabajar, hacer coworking u organizar conferencias 
+            </h3>
+            <h3 class="w300">
+              Encuentra en cuestion de minutos el espacio para trabajar mas cercano a ti.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="app" class="alternate">
+      <div class="container seccion">
+        <h2 class="center">Descarga nuestra app!</h2>
+        <%= image_tag("android.jpg", class: " center center-block") %>
+      </div>
+    </section>
+
+    <footer><!-- Footer -->
+      <div class="container">
+        <div class="p-40 p-btm40">
+          <div class="row">
+            <div class="col-sm-4">
+              <%= link_to(root_path) do %>
+                <%= image_tag("logo.png", class: "img-responsive", id: "logo-footer") %> 
+              <% end %>
+            </div>
+            <div class="col-sm-10">
+              <ul id="btm-nav" class="nav nav-pills center">
+                <li><%= link_to "Inicio", root_path %></li>
+                <li><a href="index.html#quienes">Espacios</a></li>
+                <li><a href="#">Mi Cuenta</a></li>
+                <li><a href="p#">Buscar</a></li>
+                <li><a href="#">Ofrecer</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <%= javascript_include_tag "application" %>
+
+		<script> $(document).ready(function() {
+ 
+  $("#sliderProductos").owlCarousel({
+    slideSpeed : 900,
+    paginationSpeed : 900,
+    itemsCustom : [
+        [0, 1],
+        [600, 2],
+        [1000, 3],
+        [1200, 4]
+      ]
+  });
+
+  $('.owl-pagination').addClass('hidden');
+
+  var owl = $(".owl-carousel").data('owlCarousel');
+
+  $('#sliderPrev').click(function(){
+  	owl.prev();
+  });
+
+  $('#sliderNext').click(function(){
+  	owl.next();
+  });
+
+  
+ 
+}); 
+        </script>
+
+		</body>
+		</html>

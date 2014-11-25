@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html class="no-js"> <![endif]-->
+    <head>
+        <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Espazio</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/espazio.css">
+      <link rel="stylesheet" href="css/marginizer.css">
+      <link rel="icon" type="image/png" href="img/favicon.png">
+    </head>
+    <body class="p-top0">
+        <!--[if lte IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<!-- Nav -->
+    <div id="nav" class="navbar navbar navbar" role="navigation">
+      <div id="main-nav-container" class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to(root_path, id: "logo-menu-link", class: "navbar-brand") do %>
+            <%= image_tag("logo.png", class: "img-responsive", id: "logo-menu") %>
+          <% end %>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="busqueda.html">Busca</a></li>
+            <li><a href="#">Como funciona</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="form">
+            <a href="signup.html" type="submit" class="btn btn-primary">Comparte tu espacio</a>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div><!-- /Nav -->
+
+    <div id="search" class="navbar navbar-inverse">
+      <div class="container">
+        <div class="col-xs-10">
+          <form class="navbar-form navbar-right" role="search" style="margin-left:-15px;">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default" tabindex="-1">Buscar</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                  <span class="">+</span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li><a href="#">Búsqueda Avanzada</a></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--
+        <div class="col-xs-2">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Categoría <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Frutas</a></li>
+                  <li><a href="#">Verduras</a></li>
+                  <li><a href="#">Otros</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Todas</a></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div> -->
+        <div class="col-xs-2">
+          <select class="form-control" style="margin-top:8px;">
+            <option>Categoría</option>
+            <option>test1</option>
+            <option>test2</option>
+            <option>test3</option>
+            <option>otros</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-2 hidden">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Filtrar</a>
+            <a href="#" class="list-group-item">Precio</a>
+            <a href="#" class="list-group-item">Disponibilidad</a>
+            <a href="#" class="list-group-item">Localización</a>
+            <a href="#" class="list-group-item">Calificación</a>
+          </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top:20px;">
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("prueba.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jitomate.html"><h3 class="">Oficina</h3></a>
+              </div>
+
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile.html"><h4 class="media-heading">Roberto Gómez</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i> San Clemente, Queretaro</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jitomate.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("listo.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="aguacate.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile2.html"><h4 class="media-heading">Javier Garmón</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   Apatzingán, Michoacán</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="aguacate.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("prueba.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="frijol.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile3.html"><h4 class="media-heading">Anastacio Martínez</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   Tepic, Nayarit</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="frijol" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("prueba.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="saladette.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile.html"><h4 class="media-heading">Gerardo Pérez</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   San Martín, Querétaro</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="saladette.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("prueba.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="fresa.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile.html"><h4 class="media-heading">José López</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   Jacona, Michoacán</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="fresa.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("prueba.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="jalapeno.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile.html"><h4 class="media-heading">Roberto Gómez</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   San Clemente, Querétaro</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="jalapeno.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("prueba.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="serrano.html"><h3>Oficna</h3></a>
+              </div>
+
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile2.html"><h4 class="media-heading">Javier Garmón</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   Apatzingán, Michoacán</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="serrano.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("prueba.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="cebolla.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile.html"><h4 class="media-heading">Gerardo Pérez</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   San Martín, Querétaro</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="cebolla.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("prueba.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="mango.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile3.html"><h4 class="media-heading">Anastacio Martínez</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   Tepic, Nayarit</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="mango.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("listo.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="aguacate2.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile.html"><h4 class="media-heading">Felipe Fernández</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   Buenavista, Michoacán</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="aguacate2.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("prueba.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="rabano.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile.html"><h4 class="media-heading">Roberto Gómez</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   San Clemente, Querétaro</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="rabano.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-3 product">
+            <div class="row">
+              <div class="col-xs-12">
+                <%= link_to(signup_path) do %>
+                  <%= image_tag("listo.jpg", class: "img-responsive", alt: "...") %> 
+                <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="caption col-md-9 col-xs-12">
+                <a href ="cebolla2.html"><h3>Oficina</h3></a>
+              </div>
+            </div>
+            <div class="media product-profile">
+              <div class="media-body">
+                <a href="profile.html"><h4 class="media-heading">Gerardo Pérez</h4></a>
+                <p class ="location"><i class="fa fa-map-marker"></i>   San Martín, Querétaro</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-empty"></i>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="cebolla2.html" class="btn btn-primary right btn-xlrg" role="button">Comprar</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row m-btm20">
+
+        <div class="col-md-12">
+          <ul class="pagination right m-right15">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+    
+
+   <footer><!-- Footer -->
+      <div class="container">
+        <div class="p-40 p-btm40">
+          <div class="row">
+            <div class="col-sm-4">
+              <%= link_to(root_path) do %>
+                <%= image_tag("logo.png", class: "img-responsive", id: "logo-footer") %> 
+              <% end %>
+            </div>
+            <div class="col-sm-10">
+              <ul id="btm-nav" class="nav nav-pills center">
+                <li><%= link_to "Inicio", root_path %></li>
+                <li><a href="index.html#quienes">Espacios</a></li>
+                <li><a href="#">Mi Cuenta</a></li>
+                <li><a href="p#">Buscar</a></li>
+                <li><a href="#">Ofrecer</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
+</html>
