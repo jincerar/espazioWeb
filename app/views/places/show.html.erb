@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @place.nombre %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @place.ubicacion %>
+</p>
+
+<p>
+  <strong>Espacio:</strong>
+  <%= @place.espacio %>
+</p>
+
+<p>
+  <strong>Amenities:</strong>
+  <%= @place.amenities %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @place.precio %>
+</p>
+
+<p>
+  <strong>Horario:</strong>
+  <%= @place.horario %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @place.usuario_id %>
+</p>
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>

@@ -1,14 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Espazio</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Espazio</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
+<!-- Nav -->
+    <div id="nav" class="navbar navbar navbar" role="navigation">
+      <div id="main-nav-container" class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to(root_path, id: "logo-menu-link", class: "navbar-brand") do %>
+            <%= image_tag("logo.png", class: "img-responsive", id: "logo-menu") %>
+          <% end %>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="busqueda.html">Busca</a></li>
+            <li><a href="#">Como funciona</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="form">
+            <a href="signup.html" type="submit" class="btn btn-primary">Comparte tu espacio</a>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div><!-- /Nav -->
+
 <%= yield %>
+
+<footer><!-- Footer -->
+      <div class="container">
+        <div class="p-40 p-btm40">
+          <div class="row">
+            <div class="col-sm-4">
+              <%= link_to(root_path) do %>
+                <%= image_tag("logo.png", class: "img-responsive", id: "logo-footer") %> 
+              <% end %>
+            </div>
+            <div class="col-sm-10">
+              <ul id="btm-nav" class="nav nav-pills center">
+                <li><%= link_to "Inicio", root_path %></li>
+                <li><a href="index.html#quienes">Espacios</a></li>
+                <li><a href="#">Mi Cuenta</a></li>
+                <li><a href="p#">Buscar</a></li>
+                <li><a href="#">Ofrecer</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 </body>
 </html>

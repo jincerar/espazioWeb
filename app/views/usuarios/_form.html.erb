@@ -1,0 +1,100 @@
+<section id="registration">
+      <div class="container">
+        <div class="row seccion" style="background-color:#fff;">
+          <div class="col-sm-offset-2 col-sm-8">
+            <h1 class="w300 center">¡Bienvenido!</h1>
+            <h3 class="w300 center">Déjanos tus datos y pronto te contactaremos.</h3>
+
+           <!-- <form id="registration-form" role="form"> -->
+
+            <%= form_for(@usuario) do |f| %>
+
+             <% if @usuario.errors.any? %>
+             <div id="error_explanation">
+              <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+              <ul>
+                <% @usuario.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+            <% end %>
+
+              <div id="nombreFrm" class="form-group">
+                <!-- <label for="exampleInputEmail1">Nombre*</label> -->
+                <%= f.label :nombre  %><br>
+                <!-- <input type="text" class="form-control" id="nombreIn" placeholder="Nombre" minlength="2" required> -->
+                <%= f.text_field :nombre, class: "form-control"  %>
+              </div>
+
+              <div id="apellidoFrm" class="form-group">
+               <!--  <label for="exampleInputEmail1">Apellido*</label>
+                <input type="text" class="form-control" id="apellidoIn" placeholder="Apellido" minlength="2" required> -->
+                <%= f.label :apellido %><br>
+                <%= f.text_field :apellido, class: "form-control" %>
+              </div>
+
+              <div id="emailFrm" class="form-group">
+               <!--  <label for="exampleInputEmail1">Correo Electrónico*</label>
+                <input type="email" class="form-control" id="emailIn" placeholder="Email" required> -->
+                <%= f.label :correo  %><br>
+                <%= f.text_field :correo, type: "email", class: "form-control" %>
+              </div>
+
+               <div id="nombreFrm" class="form-group">
+                <!-- <label for="exampleInputEmail1">Nombre*</label> -->
+                <%= f.label :servicio  %><br>
+                <!-- <input type="text" class="form-control" id="nombreIn" placeholder="Nombre" minlength="2" required> -->
+                <%= f.text_field :servicio, class: "form-control" %>
+              </div>
+
+
+              <!-- <div id="ocupacionFrm" class="form-group">
+                <label for="exampleInputEmail1" style="width:100%">Servicio*</label>
+                <div class="radio-inline">
+                  <label style="w300">
+                    <input id="btn-rento" type="radio" name="optionsRadios" id="optionsRadios1" value="Rento">
+                    Rento
+                  </label>
+                </div>
+                <div class="radio-inline">
+                  <label style="w300">
+                    <input id="btn-busco" type="radio" name="optionsRadios" id="optionsRadios1" value="Busco lugar">
+                    Busco lugar
+                  </label>
+                </div>
+                <div class="radio-inline">
+                  <label style="w300">
+                    <input id="btn-otro" type="radio" name="optionsRadios" id="optionsRadios1" value="Otro">
+                    Otro
+                  </label>
+                </div>
+                <div id="otro-input" class="hidden form-group">
+                  <input type="text" class="form-control" id="otroIn" placeholder="Chef, distribuidor, etc...">
+                </div>
+              </div> -->
+
+
+
+              <div class="form-group">
+                <!-- <label style="w300">
+                  Descripción de tu negocio.
+                </label>
+                <textarea id="descripcionIn" class="form-control fill" rows="5"></textarea> -->
+                 <%= f.label :descripcion %><br>
+                 <%= f.text_area :descripcion, class: "form-control fill", rows: "5" %>
+              </div>
+
+             <!--  <button id="submit-registration" class="btn btn-primary fill" onclick="validate()">Enviar</button> -->
+             <div class=" btn btn-primary fill actions">
+              <%= f.submit %>
+            </div>
+
+           <!--  </form> -->
+           <% end %>
+
+          </div>
+        </div>
+      </div>
+    </section>
